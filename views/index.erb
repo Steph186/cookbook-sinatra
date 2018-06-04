@@ -1,0 +1,20 @@
+
+<h1>This is your Cookbook</h1>
+<h2>Store your favourite recipes her</h2>
+<p>--------------------------------------------------------------------------------</p>
+<% @recipes.each_with_index do |rec, index| %>
+<div>
+<h2> <%= rec.name %></h2>
+<p> <%= rec.description %> </p>
+<p> <%= rec.prep_time %> </p>
+<p> <%= rec.difficulty %> </p>
+<% path = "destroy/#{index}" %>
+<a href="/<%=path%>">Destroy this recipe</a>
+</div>
+<% end %>
+
+<br></br><br></br>
+<a href="/new">Create New Recipe</a>
+<!--
+<div></div>
+<img src="" alt=""> -->
